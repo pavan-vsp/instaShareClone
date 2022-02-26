@@ -140,39 +140,6 @@ const Header = props => {
           </button>
         </div>
       </div>
-      {/* <div className={`nav-menu-mobile ${menuToggle ? 'menu-hide' : ''}`}>
-        <ul className="nav-menu-list-mobile">
-          <Link to="/" className="nav-link nav-menu-item">
-            <li className="nav-menu-item-mobile">Home</li>
-          </Link>
-          <Link to="/" className="nav-link nav-menu-item">
-            <li className="nav-menu-item-mobile">Search</li>
-          </Link>
-          <Link to="/my-profile" className="nav-link nav-menu-item">
-            <li className="nav-menu-item-mobile">Profile</li>
-          </Link>
-          <li className="nav-menu-item-mobile">
-            <button
-              type="button"
-              className="logout-desktop-btn"
-              onClick={onClickLogout}
-            >
-              Logout
-            </button>
-          </li>
-
-          <li className="nav-menu-item-mobile">
-            <button type="button" className="nav-mobile-btn">
-              <img
-                src="https://res.cloudinary.com/visvarma/image/upload/v1644585177/InstaShare%20%28Instagram-Clone%29/Solid_xqz8in.png"
-                alt="nav hamburger"
-                className="nav-bar-menu-image"
-                onClick={onCloseMenu}
-              />
-            </button>
-          </li>
-        </ul>
-      </div> */}
     </nav>
   )
 }

@@ -29,31 +29,7 @@ const ProfileView = props => {
             alt={`${userIdentification} profile`}
             className="profile-img "
           />
-          {/* <div className="small-screen-view">
-            <div className="mobile-view-image-details">
-              <h1 className="small-screen-view-userName">{userName}</h1>
-              <img
-                src={profilePic}
-                alt={`${userIdentification} profile`}
-                className="profile-img "
-              />
-              <h1 className="small-screen-view-userId">{userId}</h1>
-            </div>
-            <div className="credentials-mobile-view">
-              <p>
-                <span>{postsCount}</span>
-                <span>Posts</span>
-              </p>
-              <p>
-                <span>{followersCount}</span>
-                <span>Followers</span>
-              </p>
-              <p>
-                <span>{followingCount}</span>
-                <span>Following</span>
-              </p>
-            </div>
-          </div> */}
+
           <div className="profile-info-container ">
             <h1 className="profile-title">{userName}</h1>
             <div className="profile-stats-container">
