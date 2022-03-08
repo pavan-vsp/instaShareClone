@@ -8,6 +8,7 @@ import './index.css'
 
 const Header = props => {
   const [menuToggle, setMenuToggle] = useState(false)
+  const [searchToggle, setSearchToggle] = useState(false)
   const [searchInput, setSearchInput] = useState('')
 
   const onClickLogout = () => {
@@ -43,7 +44,7 @@ const Header = props => {
                 src="https://res.cloudinary.com/visvarma/image/upload/v1644510074/InstaShare%20%28Instagram-Clone%29/Login-lg-Logo_wjasnt.png"
                 alt="website logo"
               />
-              <h1 className="header-website-logo-heading">Insta Share</h1>
+              <h1 className="header-website-logo-heading fs">Insta Share</h1>
             </Link>
           </div>
 
@@ -60,18 +61,22 @@ const Header = props => {
           <div className="mobile-nav-bar">
             <ul className="nav-menu-list-mobile">
               <Link to="/" className="nav-link nav-menu-item">
-                <li className="nav-menu-item-mobile">Home</li>
+                <li className="nav-menu-item-mobile fs">Home</li>
               </Link>
-              <Link to="/" className="nav-link nav-menu-item">
-                <li className="nav-menu-item-mobile">Search</li>
+              <Link
+                to="/"
+                className="nav-link nav-menu-item"
+                onClick={() => setSearchToggle(!searchToggle)}
+              >
+                <li className="nav-menu-item-mobile fs">Search</li>
               </Link>
               <Link to="/my-profile" className="nav-link nav-menu-item">
-                <li className="nav-menu-item-mobile">Profile</li>
+                <li className="nav-menu-item-mobile fs">Profile</li>
               </Link>
               <li className="nav-menu-item-mobile">
                 <button
                   type="button"
-                  className="logout-desktop-btn"
+                  className="logout-desktop-btn fs"
                   onClick={onClickLogout}
                 >
                   Logout
@@ -89,6 +94,28 @@ const Header = props => {
                 </button>
               </li>
             </ul>
+            {searchToggle && (
+              <div className="mobile-search-bar">
+                <li className="nav-menu-item search-input-container ">
+                  <input
+                    value={searchInput}
+                    type="search"
+                    className="search-input"
+                    placeholder="Search Caption"
+                    onChange={onChangeSearchInput}
+                  />
+
+                  <button
+                    type="button"
+                    className="search-icon-button"
+                    onClick={onClickSearchInput}
+                    testid="searchIcon"
+                  >
+                    <FaSearch className="search-icon" />
+                  </button>
+                </li>
+              </div>
+            )}
           </div>
         ) : (
           ''
@@ -102,7 +129,7 @@ const Header = props => {
                 alt="website logo"
               />
             </Link>
-            <h1 className="header-website-logo-heading">Insta Share</h1>
+            <h1 className="header-website-logo-heading fs">Insta Share</h1>
           </div>
 
           <ul className="nav-menu">
@@ -125,15 +152,15 @@ const Header = props => {
               </button>
             </li>
             <Link to="/" className="nav-link">
-              <li className="nav-menu-item">Home</li>
+              <li className="nav-menu-item fs">Home</li>
             </Link>
             <Link to="/my-profile" className="nav-link">
-              <li className="nav-menu-item">Profile</li>
+              <li className="nav-menu-item fs">Profile</li>
             </Link>
           </ul>
           <button
             type="button"
-            className="logout-desktop-btn"
+            className="logout-desktop-btn fs"
             onClick={onClickLogout}
           >
             Logout
